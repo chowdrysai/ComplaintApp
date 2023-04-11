@@ -1,0 +1,22 @@
+<h2>Welcome to Complaint Management System</h2>
+
+{{!-- <img class="image1" src="images/download.png" alt="image not found"> --}}
+<br>
+<h3>Hello {{user.name}} !!!</h3>
+
+<br>
+<br>
+{{#if isAdmin}}
+<a href="/complaint" class="btn btn-success btn-lg">Register a Complaint</a>
+{{/if}}
+{{#if isUser}}
+<a href="/complaint" class="btn btn-success btn-lg">Register a Complaint</a>
+{{/if}}
+{{#if isAdmin}}
+<a href="/admin" class="btn btn-success btn-lg">Show All Complaints</a>
+{{else if isJeng}}
+<a href="/jeng" class="btn btn-success btn-lg">Show All Complaints</a>
+<a href="/jengpending" class="btn btn-success btn-lg">Show Pending Complaints</a>
+{{else}}
+<a href="/status" class="btn btn-success btn-lg">Complaint status</a>
+{{/if}}

@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Flat NO.</th>
+      <th scope="col">Email</th>
+      <th scope="col">Description</th>
+      <th scope="col">Contact No.</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each complaints}}
+        <tr>
+            <td>{{flat_no}}</td>
+            <td>{{email}}</td>
+            <td>{{desc}}</td>
+            <td>{{contact}}</td>
+            <td>{{status}}</td>
+        </tr>
+    {{/each}}
+    
+  </tbody>
+</table>

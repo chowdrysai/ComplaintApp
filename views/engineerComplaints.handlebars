@@ -1,0 +1,32 @@
+<table class="table table-bordered">
+  <thead class="table-success">
+    <tr>
+      <th scope="col">Flat NO.</th>
+      <th scope="col">Email</th>
+      <th scope="col">Description</th>
+      <th scope="col">Contact No.</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each complaints}}
+    <form method="post" action="/CloseTicket">
+      <input type="hidden" value={{uuid}} name="complaintUuid">
+      <input type="hidden" value={{route}} name="route">
+      <tr>
+        <td>{{flat_no}}</td>
+        <td>{{email}}</td>
+        <td>{{desc}}</td>
+        <td>{{contact}}</td>
+        <td>
+          {{#if isActive}}
+          <button id="addLine" type="submit" class="btn btn-success myButton">Active</button>
+          {{else}}
+          {{status}}
+          {{/if}}
+        </td>
+      </tr>
+    </form>
+    {{/each}}
+  </tbody>
+</table>
